@@ -8,7 +8,7 @@ import { ToastProvider } from './lib/ToastContext'
 import ProtectedRoute from './components/ProtectedRoute'
 import Layout from './components/Layout'
 
-import Landing from './pages/Landing'
+import Landing, { PrivacyPolicy, TermsOfService, ContactPage } from './pages/Landing'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import ResetPassword from './pages/ResetPassword'
@@ -26,6 +26,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Routes>
             {/* Public routes */}
             <Route path="/" element={<Landing />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+<Route path="/terms" element={<TermsOfService />} />
+<Route path="/contact" element={<ContactPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/reset-password" element={<ResetPassword />} />
